@@ -57,11 +57,12 @@ view suggestsesasonproducts as select from ( ( ( ( (
                                             
                                             
      {
-        Countries.Name,
-        Regions.Name as RegionName, 
-        Cities.Name as CityName,
-        Seasons.Name as SeasonName,
-        products.productID,
+
+     key   Countries.Name,
+     key    Regions.Name as RegionName, 
+     key    Cities.Name as CityName,
+     key   Seasons.Name as SeasonName,
+     key   products.productID,
         products.productType,
         products.productName,
         products.expiryDate,
