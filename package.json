@@ -1,27 +1,28 @@
 {
-    "name": "services",
-    "version": "1.0.0",
-    "description": "Service layer for iShopper application",
-    "repository": "<Add your repository here>",
-    "license": "UNLICENSED",
-    "private": true,
-    "dependencies": {
-        "@sap/cds": "^3",
-        "@sap/hana-client": "^2.4.177",
-        "express": "^4",
-        "hdb": "^0.18.1"
-    },
-    "scripts": {
-        "start": "npx cds run"
-    },
-    "cds": {
-        "requires": {
-            "db": {
-                "kind": "sql"
-            }
-        }
-    },
-    "devDependencies": {
-        "@sap/hdi-deploy": "3.11.11"
+  "name": "services",
+  "version": "1.0.0",
+  "description": "Service layer for iShopper application",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^3",
+    "@sap/hana-client": "^2.4.177",
+    "express": "^4",
+    "hdb": "^0.18.1"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite"
+      }
     }
+  },
+  "devDependencies": {
+    "@sap/hdi-deploy": "3.11.11",
+    "sqlite3": "^5.0.0"
+  }
 }

@@ -2,6 +2,8 @@ namespace products;
 
 entity products
      {
+       key userId               : UUID; //must be taken from login table
+       key barcodeId  : String;
        key productID        : UUID;
         productType        : UUID;
         productName        : String;
@@ -24,7 +26,9 @@ entity productType {
 
 view itemsPurchased as select from products left join productType on
 											products.productType = productType.productType {
-                                              products.productID,
+    key   products.userId,                                       
+    key   products.productID,
+    key   products.barcodeId,
        products.productType,
         products.productName,
         products.expiryDate,
