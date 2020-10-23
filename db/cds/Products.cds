@@ -1,5 +1,6 @@
 namespace products;
 
+
 entity products
      {
        key userId               : UUID; //must be taken from login table
@@ -12,6 +13,8 @@ entity products
         remindOnDate    : Date;
         shoppingID  :UUID;
         shelfLifeInDays : Integer;
+        remindBefore : Integer;
+        imageUrl : String;
         purchasedOn: Date;
         productConsumed: Boolean Default false;
         isPurchased: Boolean Default false;
