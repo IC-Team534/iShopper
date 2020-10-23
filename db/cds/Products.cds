@@ -7,6 +7,7 @@ entity products
        key productID        : UUID;
         productType        : UUID;
         productName        : String;
+        prodDescr  : String;
         expiryDate          : Date;
         remindOnDate    : Date;
         shoppingID  :UUID;
@@ -24,6 +25,7 @@ entity productType {
     
 }
 
+/*
 view itemsPurchased as select from products left join productType on
 											products.productType = productType.productType {
     key   products.userId,                                       
@@ -39,9 +41,12 @@ view itemsPurchased as select from products left join productType on
         products.productConsumed,
         products.isPurchased,
         productType.productTypeDescription,
-	} where isPurchased = true and productConsumed = false;
+        products.prodDescr,
+	};
+    //where isPurchased = true and productConsumed = false;
 
     view itemsPurchasedOutOfStock as select from itemsPurchased where isPurchased = true and productConsumed = true;
 
-    view itemsPurchasedTobeAddedToShoppingList as select from itemsPurchased where isPurchased = true and productConsumed = true
-    and remindOnDate > CURRENT_DATE and remindOnDate < (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), 15);
+    //view itemsPurchasedTobeAddedToShoppingList as select from itemsPurchased where isPurchased = true and productConsumed = true
+    //and remindOnDate > CURRENT_DATE and remindOnDate < (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), 15);
+    */

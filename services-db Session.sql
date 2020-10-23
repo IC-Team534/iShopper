@@ -1,0 +1,1 @@
+alter table products_products drop column producttype

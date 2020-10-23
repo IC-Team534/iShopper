@@ -63,7 +63,7 @@ view suggestsesasonproducts as select from ( ( ( ( (
      key    Cities.Name as CityName,
      key   Seasons.Name as SeasonName,
      key   products.productID,
-        products.productType,
+        //products.productType,
         products.productName,
         products.expiryDate,
         products.remindOnDate,

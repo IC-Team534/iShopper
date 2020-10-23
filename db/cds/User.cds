@@ -1,8 +1,8 @@
 namespace user;
 
 entity Details {
-    key email    : String(100);
-        ID       : UUID;
+     email    : String(100);
+    key   ID       : UUID;
         password : String(100);
         fullName    : String(100);
         dateOfBirth : Date;
